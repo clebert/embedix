@@ -1,6 +1,6 @@
 {
   "name": "embedix",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple vector store written in TypeScript with a WASM backend.",
   "repository": {
     "type": "git",
