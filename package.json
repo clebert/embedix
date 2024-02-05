@@ -22,6 +22,8 @@
     "preformat:check": "zig fmt --check *.zig src/*.zig",
     "format:check": "prettier --check .",
     "lint": "eslint .",
+    "release": "npm version",
+    "postrelease": "git push --follow-tags",
     "start": "node benchmark.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --silent"
   },
