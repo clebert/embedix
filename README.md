@@ -45,7 +45,7 @@ console.log(queryResults);
 ## Performance
 
 In benchmark tests conducted on an **Apple M1 Pro**, involving embedding vectors of size **768** and
-**10,000** documents, Embedix was able to perform a single query in approximately **4**
+**10,000** documents, **Embedix** was able to perform a single query in approximately **4**
 milliseconds.
 
 ```sh
