@@ -1,0 +1,50 @@
+{
+  "name": "embedix",
+  "version": "0.0.0",
+  "description": "A simple vector store written in TypeScript with a WASM backend.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clebert/embedix.git"
+  },
+  "license": "MIT",
+  "author": "Clemens Akens",
+  "type": "module",
+  "exports": "./lib/mod.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "compile:check": "tsc",
+    "precompile:emit": "zig build",
+    "compile:emit": "tsc --project tsconfig.emit.json",
+    "preformat": "zig fmt *.zig src/*.zig",
+    "format": "prettier --write .",
+    "preformat:check": "zig fmt --check *.zig src/*.zig",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "start": "node benchmark.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --silent"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@swc/core": "^1.4.0",
+    "@swc/jest": "^0.2.36",
+    "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-markdown": "^3.0.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "wallaby": {
+    "env": {
+      "params": {
+        "runner": "--experimental-vm-modules"
+      }
+    }
+  }
+}
