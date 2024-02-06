@@ -50,6 +50,7 @@ console.log(queryResults);
 | System                | Query Duration          | Embedding Size | Document Count |
 | --------------------- | ----------------------- | -------------- | -------------- |
 | Apple M1 Pro          | 4.31 ms                 | 768            | 10,000         |
+| Apple M1 Pro          | 34.28 ms                | 768            | 100,000        |
 | Apple M1 Pro          | 40.08 ms                | 1000           | 100,000        |
 | AWS Lambda (1,769 MB) | 5.75 ms                 | 768            | 10,000         |
 | AWS Lambda (1,769 MB) | 72.02 ms                | 1000           | 100,000        |
