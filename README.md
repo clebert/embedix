@@ -47,13 +47,13 @@ console.log(queryResults);
 
 ## Performance
 
-| System                | Node.js | Query Duration          | Embedding Size | Document Count |
-| --------------------- | ------- | ----------------------- | -------------- | -------------- |
-| Apple M1 Pro          | v20     | 4.31 ms                 | 768            | 10,000         |
-| Apple M1 Pro          | v20     | 34.28 ms                | 768            | 100,000        |
-| Apple M1 Pro          | v20     | 40.08 ms                | 1000           | 100,000        |
-| AWS Lambda (1,769 MB) | v18     | 5.75 ms                 | 768            | 10,000         |
-| AWS Lambda (1,769 MB) | v18     | 72.02 ms                | 1000           | 100,000        |
-| AWS Lambda (128 MB)   | v18     | 9 ms - 69 ms (volatile) | 768            | 10,000         |
+| System                    | Node.js | Query Duration          | Embedding Size | Document Count |
+| ------------------------- | ------- | ----------------------- | -------------- | -------------- |
+| Apple M1 Pro              | v20     | 4.31 ms                 | 768            | 10,000         |
+| Apple M1 Pro              | v20     | 34.28 ms                | 768            | 100,000        |
+| Apple M1 Pro              | v20     | 40.08 ms                | 1000           | 100,000        |
+| AWS Lambda (x86/1,769 MB) | v18     | 5.75 ms                 | 768            | 10,000         |
+| AWS Lambda (x86/1,769 MB) | v18     | 72.02 ms                | 1000           | 100,000        |
+| AWS Lambda (x86/128 MB)   | v18     | 9 ms - 69 ms (volatile) | 768            | 10,000         |
 
 **Note:** At 1,769 MB, an AWS Lambda function has the equivalent of one vCPU.
