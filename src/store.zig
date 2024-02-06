@@ -52,8 +52,7 @@ export fn performQuery(self: *const Self) void {
             query_embedding_squared_length * document_embedding_squared_length,
         );
 
-        const cosine_similarity =
-            if (denominator == 0) -1 else computeDotProduct(
+        const cosine_similarity = if (denominator == 0) -1 else computeDotProduct(
             self.query_embedding,
             document_embedding,
         ) / denominator;
