@@ -13,10 +13,10 @@ npm install embedix
 ```js
 import { Store } from 'embedix';
 import { readFile } from 'node:fs/promises';
-import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 
 Store.wasmModule = await WebAssembly.compile(
-  await readFile(createRequire(import.meta.url).resolve(`embedix/lib/store.wasm`)),
+  await readFile(fileURLToPath(import.meta.resolve(`embedix/store.wasm`))),
 );
 
 const state = Store.prepareState([

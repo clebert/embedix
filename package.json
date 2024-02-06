@@ -9,8 +9,10 @@
   "license": "MIT",
   "author": "Clemens Akens",
   "type": "module",
-  "module": "./lib/mod.js",
-  "types": "./lib/mod.d.ts",
+  "exports": {
+    ".": "./lib/mod.js",
+    "./store.wasm": "./lib/store.wasm"
+  },
   "files": [
     "lib"
   ],
