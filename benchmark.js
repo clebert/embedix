@@ -19,10 +19,15 @@ async function main(embeddingSize, documentCount) {
   store.queryEmbedding.set(createRandomEmbedding(embeddingSize));
 
   const startTime = performance.now();
+  const queryCount = 1000;
 
-  store.performQuery();
+  for (let index = 0; index < queryCount; index += 1) {
+    store.performQuery();
+  }
 
-  console.log(performance.now() - startTime, `ms`);
+  const totalTime = performance.now() - startTime;
+
+  console.log(totalTime / queryCount, `ms`);
 }
 
 await main(768, 10000);
