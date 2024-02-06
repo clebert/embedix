@@ -13,8 +13,11 @@ npm install embedix
 ```js
 import { Store } from 'embedix';
 import { readFile } from 'node:fs/promises';
+import { createRequire } from 'node:module';
 
-Store.wasmModule = await WebAssembly.compile(await readFile(`node_modules/embedix/lib/store.wasm`));
+Store.wasmModule = await WebAssembly.compile(
+  await readFile(createRequire(import.meta.url).resolve(`embedix/lib/store.wasm`)),
+);
 
 const state = Store.prepareState([
   { document: `bar`, documentEmbedding: [4, 5, 6] },
