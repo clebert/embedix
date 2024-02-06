@@ -47,14 +47,10 @@ console.log(queryResults);
 
 ## Performance
 
-In benchmark tests conducted on an **Apple M1 Pro**, involving embedding vectors of size **768** and
-**10,000** documents, **Embedix** was able to perform a single query in approximately **4**
-milliseconds.
-
-```sh
-npm start
-```
-
-```sh
-4.314375042915344 ms
-```
+| System                | Query Duration          | Embedding Size | Document Count |
+| --------------------- | ----------------------- | -------------- | -------------- |
+| Apple M1 Pro          | 4.31 ms                 | 768            | 10,000         |
+| Apple M1 Pro          | 40.08 ms                | 1000           | 100,000        |
+| AWS Lambda (1,769 MB) | 5.75 ms                 | 768            | 10,000         |
+| AWS Lambda (1,769 MB) | 72.02 ms                | 1000           | 100,000        |
+| AWS Lambda (128 MB)   | 9 ms - 69 ms (volatile) | 768            | 10,000         |
