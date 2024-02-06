@@ -55,3 +55,5 @@ console.log(queryResults);
 | AWS Lambda (1,769 MB) | 5.75 ms                 | 768            | 10,000         |
 | AWS Lambda (1,769 MB) | 72.02 ms                | 1000           | 100,000        |
 | AWS Lambda (128 MB)   | 9 ms - 69 ms (volatile) | 768            | 10,000         |
+
+**Note:** At 1,769 MB, an AWS Lambda function has the equivalent of one vCPU.
