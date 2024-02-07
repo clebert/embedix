@@ -45,6 +45,18 @@ console.log(queryResults);
 ]
 ```
 
+## AWS Lambda: Best Practices
+
+Embedix is designed to operate seamlessly within an AWS Lambda Node.js environment. The primary
+focus is on reducing the cold start time by serializing the state prepared with the
+`Store.prepareState` function into two separate files. The resulting first file should comprise the
+`init` state in JSON format. This will facilitate rapid store initialization within the Lambda
+function. Simultaneously, a second file should encapsulate the `documentEmbeddings` state - a
+Float32Array - saved as a binary file. This is designed to be directly loaded into the
+`store.documentEmbeddings` Float32Array. As a best practice, it is recommended to use the Node.js
+[`filehandle.read([options])`](https://nodejs.org/api/fs.html#filehandlereadoptions) function to
+avoid redundant byte duplication at runtime.
+
 ## Performance
 
 All results presented are based on the average of 1,000 query repetitions.
