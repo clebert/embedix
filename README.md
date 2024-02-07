@@ -61,12 +61,13 @@ avoid redundant byte duplication at runtime.
 
 All results presented are based on the average of 1,000 query repetitions.
 
-| System                    | Node.js | Query Duration | Embedding Size | Document Count |
-| ------------------------- | ------- | -------------- | -------------- | -------------- |
-| Apple M1 Pro              | v20     | 2.35 ms        | 768            | 10,000         |
-| Apple M1 Pro              | v20     | 28.11 ms       | 768            | 100,000        |
-| Apple M1 Pro              | v20     | 32.36 ms       | 1,000          | 100,000        |
-| AWS Lambda (x86/1,769 MB) | v20     | 5.94 ms        | 768            | 10,000         |
-| AWS Lambda (ARM/1,769 MB) | v20     | 8.70 ms        | 768            | 10,000         |
+| System                     | Node.js | Query Duration | Embedding Size | Document Count |
+| -------------------------- | ------- | -------------- | -------------- | -------------- |
+| Apple M1 Pro               | v20     | 2.35 ms        | 768            | 10,000         |
+| Apple M1 Pro               | v20     | 28.11 ms       | 768            | 100,000        |
+| Apple M1 Pro               | v20     | 32.36 ms       | 1,000          | 100,000        |
+| AWS Lambda (x86/1,769 MB)  | v20     | 5.94 ms        | 768            | 10,000         |
+| AWS Lambda (x86/10,240 MB) | v20     | 5.21 ms        | 768            | 10,000         |
+| AWS Lambda (ARM/1,769 MB)  | v20     | 8.70 ms        | 768            | 10,000         |
 
 **Note:** At 1,769 MB, an AWS Lambda function has the equivalent of one vCPU.
