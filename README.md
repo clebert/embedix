@@ -57,6 +57,10 @@ Float32Array - saved as a binary file. This is designed to be directly loaded in
 [`filehandle.read([options])`](https://nodejs.org/api/fs.html#filehandlereadoptions) function to
 avoid redundant byte duplication at runtime.
 
+It is also advisable to declare the store as a module scope variable outside of the handler function
+and initialize it lazily on the first handler call. This enables the reuse of the store instance for
+subsequent calls as long as the Lambda function remains warm.
+
 ## Performance
 
 All results presented are based on the average of 1,000 query repetitions.
