@@ -1,7 +1,7 @@
-import { Store } from './lib/store.js';
-import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
+import { Store } from './lib/store.js';
 import { fileURLToPath } from 'node:url';
+import { readFile } from 'node:fs/promises';
 
 Store.wasmModule = await WebAssembly.compile(
   await readFile(join(dirname(fileURLToPath(import.meta.url)), `lib/store.wasm`)),

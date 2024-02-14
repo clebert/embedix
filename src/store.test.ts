@@ -1,8 +1,8 @@
-import { Store } from './store.js';
 import { beforeAll, describe, expect, test } from '@jest/globals';
-import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
+import { Store } from './store.js';
 import { fileURLToPath } from 'node:url';
+import { readFile } from 'node:fs/promises';
 
 describe(`Store`, () => {
   beforeAll(async () => {

@@ -37,10 +37,9 @@
   "editor.rulers": [
     100
   ],
+  "eslint.experimental.useFlatConfig": true,
   "files.exclude": {
     ".editorconfig": true,
-    ".eslintignore": true,
-    ".eslintrc.json": true,
     ".github": true,
     ".github/workflows/ci.yml": true,
     ".gitignore": true,
@@ -55,7 +54,6 @@
     "jest.config.json": true,
     "tsconfig.base.json": true,
     "tsconfig.emit.json": true,
-    "tsconfig.eslint.json": true,
     "tsconfig.json": true
   },
   "json.schemaDownload.enable": true,

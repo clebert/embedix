@@ -1,6 +1,5 @@
 /.prettierrc.json
 /LICENSE*
-/.eslintrc.json
 /.github/workflows/ci.yml
 /coverage
 /jest.config.json
@@ -10,6 +9,5 @@
 /tsconfig.json
 /lib
 /tsconfig.emit.json
-/tsconfig.eslint.json
 /.vscode/extensions.json
 /.vscode/settings.json

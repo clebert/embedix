@@ -14,7 +14,6 @@
     "https://raw.githubusercontent.com/clebert/onecfg-lib/main/lib/onecfg-swc.json",
     "https://raw.githubusercontent.com/clebert/onecfg-lib/main/lib/onecfg-typescript.json",
     "https://raw.githubusercontent.com/clebert/onecfg-lib/main/lib/onecfg-typescript-emit.json",
-    "https://raw.githubusercontent.com/clebert/onecfg-lib/main/lib/onecfg-typescript-eslint.json",
     "https://raw.githubusercontent.com/clebert/onecfg-lib/main/lib/onecfg-vscode.json",
     "https://raw.githubusercontent.com/clebert/onecfg-lib/main/lib/onecfg-zig.json"
   ],

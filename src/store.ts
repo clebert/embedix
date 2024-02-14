@@ -122,9 +122,9 @@ export interface StoreQueryResult<TDocument> {
 interface WasmExports extends WebAssembly.Exports {
   readonly memory: WebAssembly.Memory;
 
-  create(embeddingSize: number, documentCount: number): number;
-  getDocumentEmbeddingsPtr(backendPtr: number): number;
-  getQueryEmbeddingPtr(backendPtr: number): number;
-  getQueryResultsPtr(backendPtr: number): number;
-  performQuery(backendPtr: number): void;
+  create: (embeddingSize: number, documentCount: number) => number;
+  getDocumentEmbeddingsPtr: (backendPtr: number) => number;
+  getQueryEmbeddingPtr: (backendPtr: number) => number;
+  getQueryResultsPtr: (backendPtr: number) => number;
+  performQuery: (backendPtr: number) => void;
 }
